@@ -1,2 +1,2 @@
 <php
-echo "Esto es una prue";
+echo "Esto es una prueba";
