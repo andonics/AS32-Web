@@ -1,11 +1,7 @@
 <?php
-$x = "SSSSS";
-var_dump($x);
+$str = 'abcdef';
+echo strlen($str); // 6
 
-$x = "ZZZZZZ";
-var_dump($x);
-
-$x = "5.2";
-var_dump($x);
-
+$str = ' ab cd ';
+echo strlen($str); // 7
 ?>
