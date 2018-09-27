@@ -97,4 +97,3 @@ elseif ($dia = "5"){
 else {
   echo "No tienes clase";
 }
-?>
