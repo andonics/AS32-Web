@@ -8,8 +8,8 @@ $horario = [
 ['IAW','BBDD','EIE','IAW','ING'] // 13-14
 ];
 
-$dia = date ('N');
-$hora = date('G');
+$dia = date ('N')-1;
+$hora = date('G')-8;
 
 //echo $horario[$dia-1][$hora-8] . '<br><br>';
 
@@ -27,12 +27,18 @@ echo '<tr>';
 echo '</table><br>';
 
 
-echo '<table border=1>';
-for($x=0;$x<count($horario);$x++){
-  echo '<tr>';
-  for($y=0;$y<count($horario[$x]);$y++){
-    echo '<td>'.$horario[$x][$y].'</td>';
-  }
-  echo '</tr>';
+echo "<table border='1'>";
+for ($i=0; $i<count($horario); $i++) {
+    echo "<tr>";
+    for ($j=0; $j<count($horario[$i]); $j++) {
+        echo "<td>";
+        if ($i == $hora && $j == $dia) {
+            echo "<b>" . $horario[$i][$j] . "</b><br>";
+        } else {
+            echo $horario[$i][$j] . "<br>";
+        }
+        echo "</td>";
+    }
+    echo "<tr>";
 }
-echo '</table><br>';
+echo "</table>";
