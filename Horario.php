@@ -1,11 +1,12 @@
 <?php
-$horario = array(
-  array('BBDD','EIE','ASO','ASO','IAW','IAW'), //lunes 0
-  array('IAW','SEG','SRI','SRI','BBDD','BBDD'), //martes 1
-  array('SEG','SEG','ASO','ASO','EIE','EIE'), //miercoles 2
-  array('SRI','SRI','ASO','ASO','IAW','IAW'), //jueves 3
-  array('SEG','SEG','SRI','SRI','ING','ING') //viernes 4
-);
+$horario = [
+['BBDD','IAW','SEG','SRI','SEG'] , // 8-9
+['EIE','SEG','SEG','SRI','SEG'] , // 9-10
+['ASO','SRI','ASO','ASO','SRI'] , // 10-11
+['ASO','SRI','ASO','ASO','SRI'] , // 11-12
+['IAW','BBDD','EIE','IAW','ING'] , // 12-13
+['IAW','BBDD','EIE','IAW','ING'] // 13-14
+];
 
 $dia = date ('N');
 $hora = date('G');
@@ -26,11 +27,11 @@ echo '<tr>';
 echo '</table><br>';
 
 
-echo '<table border=2>';
-for($x=0;$x<6;$x++){
+echo '<table border=1>';
+for($x=0;$x<count($horario);$x++){
   echo '<tr>';
-  for($y=0;$y<5;$y++){
-    echo '<td>'.$horario[$y][$x].'</td>';
+  for($y=0;$y<count($horario[$x]);$y++){
+    echo '<td>'.$horario[$x][$y].'</td>';
   }
   echo '</tr>';
 }
