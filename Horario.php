@@ -27,6 +27,7 @@ echo '<tr>';
 echo '</table><br>';
 
 
+echo "<br><br>";
 echo "<table border='1'>";
 for ($i=0; $i<count($horario); $i++) {
     echo "<tr>";
