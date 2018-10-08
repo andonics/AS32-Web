@@ -22,7 +22,18 @@ if (!$conn) {
 $query = "SELECT * FROM users WHERE user='$user' AND password='$passwd'";
 echo  $query;
 
+$result = mysqli_query($conn, $query);
+
+//numeric array
+$row = mysqli_fetch_array($result, MYSQLI_NUM);
+echo $row[0] . '-';
+echo $row[1];
 
 //if ok then go to loginok.html
+if ($row){
+  echo 'Login OK';
+} else {
+  echo'Login KO';
+}
 
 //if not ok return to login.html
