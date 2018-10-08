@@ -2,10 +2,21 @@
 
 // Read from the formulary (login.html)
 // user / Password
-echo $_POST['usuario'];
-echo '<br>';
-echo $_POST['password'];
+$user = $_POST['user'];
+$password = $_POST['password'];
+
 //connect to mysql
+$servername = 'localhost:3307';
+$username = 'root';
+$password = '';
+$db = 'web';
+
+$conn = mysqli_connect($servername, $username, $password, $db);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
 
 // select from users where
 
