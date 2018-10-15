@@ -20,20 +20,21 @@ if (!$conn) {
 
 // select from users where
 $query = "SELECT * FROM users WHERE user='$user' AND password='$passwd'";
-echo  $query;
+// echo  $query;
 
 $result = mysqli_query($conn, $query);
 
 //numeric array
 $row = mysqli_fetch_array($result, MYSQLI_NUM);
-echo $row[0] . '-';
-echo $row[1];
+//echo $row[0] . '-';
+//echo $row[1];
 
 //if ok then go to loginok.html
 if ($row){
   echo 'Login OK';
 } else {
-  echo'Login KO';
+  //echo'Login KO';
+  header('Location: '.'login.html');
 }
 
 //if not ok return to login.html
