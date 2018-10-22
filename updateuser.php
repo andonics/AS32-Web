@@ -20,10 +20,10 @@ $user = $_POST['user'];
 <body>
 <table border = 0>
   <form action="updateuser2.php" method="POST">
-  <?php echo $user ?>:<br><br>
-  <input type="hidden" name='new_pass' value="<?php echo $user ?>">
-  New password <input type='password' name='new_pass'>
-  <br><br><input type="submit" value="actualizar">
+  <b><?php echo $user ?>:</b><br><br>
+  <input type="hidden" name='user' value="<?php echo $user ?>">
+  Password <input type='password' name='new_pass'>
+  <br><br><input type="submit" value="update">
 </form>
 </body>
 </html>
